@@ -11,3 +11,5 @@ Project Manager / Team Lead & C++ Developer
 
 Docker & DevOps Engineer / C++ Developer
 	•	Warren Moudoumi Moustafa Konate — Student ID: 220304142
+
+![C++ CI](https://github.com/OluwatomiwaAkinyemi/System-Programming/actions/workflows/ci.yml/badge.svg)
