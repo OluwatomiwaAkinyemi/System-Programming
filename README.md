@@ -10,4 +10,13 @@ Project Manager / Team Lead & C++ Developer
 	•	Oluwatomiwa Micheal Akinyemi — Student ID: 220304148
 
 Docker & DevOps Engineer / C++ Developer
-	•	Warren Moudoumi Moustafa Konate — Student ID: 220304142
+	•	Waren Moudoumi Moustafa Konate — Student ID: 220304142
+
+
+## 🐳 Docker Hub Repositories
+The Docker images for this project are publicly available:
+
+| Component | Docker Hub Link | Command to Pull |
+|-----------|-----------------|-----------------|
+| **C++ Application** | [sysprog-app](https://hub.docker.com/r/warenstu/sysprog-app) | `docker pull warenstu/sysprog-app:latest` |
+| **Database** | [sysprog-db](https://hub.docker.com/r/warenstu/sysprog-db) | `docker pull warenstu/sysprog-db:latest` |
