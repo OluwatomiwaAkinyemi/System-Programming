@@ -35,10 +35,15 @@ services:
     networks:
       - sysprog_net
     command: tail -f /dev/null
+    # Week 3 Task: Resource Limits (Added below)
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 512M
 
 volumes:
   db_data:
 
 networks:
-  sysprog_net:
-  
+  sysprog_net: 
