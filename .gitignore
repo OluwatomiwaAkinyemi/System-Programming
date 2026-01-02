@@ -2,3 +2,6 @@ build/
 .env
 .vscode/
 __pycache__/
+
+
+# End of gitignore configuration
