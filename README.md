@@ -24,3 +24,5 @@ The Docker images for this project are publicly available:
 
 https://hub.docker.com/r/warenstu/sysprog-app
 
+## Project Management
+* **Project Board:** [View Board Here](https://github.com/users/warenmouss/projects/1)
