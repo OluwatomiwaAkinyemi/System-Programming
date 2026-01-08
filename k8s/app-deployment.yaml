@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sysprog-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sysprog-app
+  template:
+    metadata:
+      labels:
+        app: sysprog-app
+    spec:
+      containers:
+        - name: sysprog-app
+          image: warenstu/sysprog-app:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          env:
+            - name: DB_HOST
+              value: "postgres-service"  # Connecting to the DB Service name
+            - name: DB_PORT
+              value: "5432"
+            - name: DB_USER
+              value: "myuser"            # Matches your .env
+            - name: DB_PASSWORD
+              value: "mypassword"        # Matches your .env
+            - name: DB_NAME
+              value: "sysprogdb"         # Matches your .env
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "250m"
+              
