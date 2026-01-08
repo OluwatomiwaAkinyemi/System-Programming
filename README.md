@@ -26,3 +26,22 @@ https://hub.docker.com/r/warenstu/sysprog-app
 
 ## Project Management
 * **Project Board:** [View Board Here](https://github.com/users/warenmouss/projects/1)
+
+
+## Phase 4: Kubernetes Migration (Week 4)
+
+In the final phase, the application was migrated from local Docker Compose to a Kubernetes cluster using Minikube.
+
+### Key Features
+* **Orchestration:** Managed via Minikube (v1.37.0).
+* **Deployment:**
+    * `postgres-deployment.yaml`: Stateful database set up with persistent volumes.
+    * `app-deployment.yaml`: Stateless C++ application.
+* **Service Discovery:** The app connects to the DB using the internal Kubernetes DNS name `postgres-service`.
+* **Scalability:** The application was successfully scaled to 3 replicas to demonstrate load distribution.
+
+### How to Run (Kubernetes)
+1. Start Minikube: `minikube start`
+2. Deploy Database: `kubectl apply -f k8s/postgres-deployment.yaml` & `kubectl apply -f k8s/postgres-service.yaml`
+3. Deploy App: `kubectl apply -f k8s/app-deployment.yaml` & `kubectl apply -f k8s/app-service.yaml`
+4. Access App: `minikube service sysprog-service` 
